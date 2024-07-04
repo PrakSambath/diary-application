@@ -10,15 +10,16 @@
 4. [HTML](#4-html)
    1. [General HTML Convetion](#41-general-html-convetion)
    2. [Semantic HTML Element](#42-semantic-html-element)
-5. [CSS / SCSS](#5-css--scss)
-6. [Grid System](#6-grid-system)
-7. [Javascript](#6-javascript)
+5. [CSS](#5-css)
+6. [Javascript](#6-javascript)
+7. [Comment notation](#7-comment-notation)
+8. [Components](#8-injecting-common-components)
 
 <hr/>
 
 ## 1. Folder Structure
 
-![](./folder-structure.jpg)
+![](./folder-structure.png)
 
 ## 2. Git Management
 
@@ -244,40 +245,40 @@
 
 2. **Grid System**
 
-```css
-/* desktop: 12 columns*/
-.container {
-  margin-left: 64px;
-  margin-right: 64px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 32px;
-}
+    ```css
+    /* desktop: 12 columns*/
+    .container {
+      margin-left: 64px;
+      margin-right: 64px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 32px;
+    }
 
-/* tablet: 8 columns*/
-.container {
-  margin-left: 64px;
-  margin-right: 64px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 32px;
-}
+    /* tablet: 8 columns*/
+    .container {
+      margin-left: 64px;
+      margin-right: 64px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-gap: 32px;
+    }
 
-/* mobile: 4 columns*/
-.container {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px;
-}
-```
+    /* mobile: 4 columns*/
+    .container {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 24px;
+    }
+    ```
 
 3. **Color**
 
@@ -296,6 +297,9 @@
     --clr-light-500: #7B8288;
     --clr-light-300: #3E4F5D;
     --clr-light-100: #223444;
+    --clr-quaternary-light: #F27D7D;
+    --clr-quaternary-normal: #EC3C3C;
+    --clr-quaternary-dark: #C31313;
    ```
 
 4. **Font family**
@@ -314,49 +318,59 @@
 
 6. **Padding**
 
-```css
-  --padding: 16px;
-  --padding-y: 16px;
-  --padding-x: 16px;
-  --card-padding: 16px;
-  --button-padding: 10px 16px;
-  --button-padding-x: 16px;
-  --button-padding-y: 10px;
-  --section-padding: 64px;
-  --section-padding-x: 64px;
-  --section-padding-y: 64px;
-```
+    ```css
+      --padding: 16px;
+      --padding-y: 16px;
+      --padding-x: 16px;
+      --card-padding: 16px;
+      --button-padding: 10px 16px;
+      --button-padding-x: 16px;
+      --button-padding-y: 10px;
+      --section-padding: 64px;
+      --section-padding-x: 64px;
+      --section-padding-y: 64px;
+    ```
 
 7. **Margin**
 
-```css
-  --margin: 16px;
-  --margin-x: 16px;
-  --margin-y: 16px;
-  --section-margin: 64px;
-  --section-margin-x: 64px;
-  --section-margin-y: 64px;
-```
+    ```css
+      --margin: 16px;
+      --margin-x: 16px;
+      --margin-y: 16px;
+      --section-margin: 64px;
+      --section-margin-x: 64px;
+      --section-margin-y: 64px;
+    ```
 
 8. **Gap**
 
-```css
-  --gap: 16px;
-  --grid-gap: 32px;
-```
+    ```css
+      --gap: 16px;
+      --grid-gap: 32px;
+    ```
 
 9. **Radius**
 
-```css
-  --card-border-radius: 12px;
-  --button-border-radius: 100px;
-```
+    ```css
+      --card-border-radius: 12px;
+      --button-border-radius: 100px;
+    ```
 
 10. **Transition**
 
-```css
-  --transition: all 200ms ease-in-out;
-```
+    ```css
+      --transition: all 200ms ease-in-out;
+    ```
+11. **Common classes**
+    ```css
+      .btn
+      .btn-primary
+      .btn-secondary
+      .card
+      .container
+      .grid
+      .rounded
+    ```
 
 ## 6. Javascript
 
@@ -437,45 +451,66 @@
    - For readability, avoid lines longer than **80 characters**.
    - If a JavaScript statement doesn't fit on one line, break it after an operator or a comma.
 
-## 8. Comment Notation
+## 7. Comment Notation
 
 - Use only single line comments in css and javascript to demonstrate the purpose of style and function. 
-Ex:
-``` css
- 	/*---------- common h1 size ----------*/
-	.h1{
-    ...
-	}
-  /*---------- function return sum----------*/
-  function sum(){
-    ...
-  }
-```
+Examples:
+  ``` css
+    /*---------- common h1 size ----------*/
+    .h1{
+      ...
+    }
+  ```
+  ```javascript
+    /*---------- function return sum----------*/
+    function sum(){
+      ...
+    }
+  ```
 
 - Use 2 lines comment in html to demonstrate the purpose of section 
-Ex:  
-```html
-<!------------ start navigation bar section ------------>
-			 Code here
-<!---------- end of navigation bar section------------->
-```
+Examples:  
+    ```html
+    <!------------ start navigation bar section ------------>
+          Code here
+    <!---------- end of navigation bar section------------->
+    ```
 
 
-## 7. Injecting Common Components
+## 8. Components
 
-put `<link rel="stylesheet" href="">` in the head tag
-put `<script type="module" src="">` right above the closing of body tag
+There are two types of components, `common components` and `specific components`
+- **common components**
+use to create built in web element in optimal way.
+  ```javascript
+      // normal declaration
+      const button = document.createElement('button');
+      button.textContent = 'Submit';
+      button.setAttribute('type', 'submit');
+      button.className = 'btn-primary';
 
-Using component in html
-```html
-<!-- common component -->
-<component-name></component-name>
-```
+      // using common components
+      import Button from './components/button.js'
 
-Importing component in javascript
-```javascript
-import {Component} from "path";
+      const button = new Button('Submit', 'button', 'btn-primary');
 
-const myComponent = new Component();
-``
+  ```
+- **specific components** it responsibles for unique purpose.
+  ```html
+  <!-- using in html -->
+  <head>
+    ...
+    <script type="module" defer src="./js/app-name.js"></script>
+  </head>
+  <body>
+    ...
+    <app-name></app-name>
+  </body>
+  ```
 
+  ```javascript
+    // using in js
+    import AppName from "./js/app-name.js";
+
+    const appName = new AppName();
+  ```
