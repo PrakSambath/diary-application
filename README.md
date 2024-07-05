@@ -9,7 +9,7 @@ Deployment website : [Diary Application](https://praksambath.github.io/diary-app
 
 ## Description
 
-Welcome to Diary Application! This application allows users to create and manage personal journal entries. Whether you want to record your thoughts, memories, or daily experiences, Diary Application has you covered.
+Welcome to Diary Application! My name is PRAK Sambath (ប្រាក់ សម្បត្តិ) as in Khmer, I create this application allows users to create and manage personal journal entries using HTML, CSS, and JavaScript. Whether you want to record your thoughts, memories, or daily experiences, Diary Application has you covered.
 
 ## Visuals
 
@@ -34,6 +34,8 @@ Create new entry
   - Security and Privacy:
     - Your entries are stored locally on your device.
     - No data is sent to external servers.
+  - Language support:
+    - English and Khmer.
 
 ## Usage
 
